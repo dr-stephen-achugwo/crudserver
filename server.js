@@ -6,10 +6,12 @@ import tutorialRoutes from "./app/routes/tutorial.routes.js";
 const app = express();
  
 const corsOptions = {
-    origin: https://crudmern-rho.vercel.app,
+    origin: "https://crudmern-rho.vercel.app/",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true, // Allow credentials (like cookies) to be sent
 };
- 
 app.use(cors(corsOptions));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
  
